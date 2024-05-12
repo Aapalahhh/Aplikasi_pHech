@@ -1,12 +1,14 @@
 # type: ignore
 import streamlit as st 
+import numpy as np
+
 with st.sidebar.container():
     st.sidebar.markdown("pHech - Aplikasi Penentuan pH")
     st.sidebar.markdown("KELOMPOK 2")
     st.image('https://background08.files.wordpress.com/2024/05/logo.jpg?w=500')
 test = st.sidebar.selectbox("Menu", ['Tentang pH', 'Penentuan pH'])
 
-st.image('https://background08.files.wordpress.com/2024/05/phech.png?w=1024')
+st.image('https://background08.files.wordpress.com/2024/05/phech-1.png?w=1024')
 
 #Halaman Tentang pH
 if test == "Tentang pH":
@@ -42,8 +44,8 @@ if test == "Tentang pH":
         with g2:
             st.image("https://media.istockphoto.com/vectors/ph-scale-balance-liquid-level-litmus-color-change-indicator-of-and-vector-id1400164115?k=20&m=1400164115&s=170667a&w=0&h=3Ao8EMXYnkG1QMR2pbNvImYPCpvBE__vksDhySORsZE=")
         st.markdown('<div style="text-align:justify">pH adalah singkatan dari "potential of hydrogen" atau "power of hydrogen". PH adalah ukuran konsentrasi ion hidrogen dalam air. Dalam kimia, pH adalah pengukuran konsentrasi ion hidrogen dalam larutan berbasis air. Ia menjadi ukuran keasaman atau kebasaan suatu larutan berair atau cairan lainnya.</div>', unsafe_allow_html=True)
-        st.markdown('<div style="text-align:justify">Skala pH merupakan perbandingan jarak pada gambar (literatur) dengan hasil pengujian, dimana pengujian dilakukan dengan menguji sampel menggunakan alat ukur pH, skala pH berfungsi sebagai tolak ukur penentuan asam atau basa nya suatu contoh/sampel. Nilai pH pada range pH 1-6 termasuk senyawa asam, sedangkan pH 7 merupakan netral dan nilai pH yang menunjukkan range 8-14 merupakan senyawaan yang bersidat basa</div>', unsafe_allow_html=True)
-
+        st.markdown('<div style="text-align:justify">Skala pH merupakan perbandingan jarak pada gambar (literatur) dengan hasil pengujian, dimana pengujian dilakukan dengan menguji sampel menggunakan alat ukur pH, skala pH berfungsi sebagai tolak ukur penentuan asam atau basa nya suatu contoh/sampel. Nilai pH pada range pH 1-6 termasuk senyawa asam, sedangkan pH 7 merupakan netral dan nilai pH yang menunjukkan range 8-14 merupakan senyawaan yang bersifat basa</div>', unsafe_allow_html=True)
+        st.write("---")
 
     with tab3:
         st.header(':red[Indikator pH Universal]')
@@ -56,7 +58,7 @@ if test == "Tentang pH":
             st.image("https://www.pakarkimia.com/wp-content/uploads/2020/05/INDIKATOR-UNIVERSAL.jpg")
             st.caption('Indikator pH Universal.')
         st.write('Indikator pH Universal Indikator pH universal merupakan indikator yang mempunyai warna standar yang berbeda untuk setiap nilai pH 1-14. Fungsi indikator universal adalah untuk memeriksa derajat keasaman suatu zat secara akurat.')
-        
+        st.write("---")
         st.header(':red[Lakmus]')
         g1, g2, g3 = st.columns([1,2,1])
         with g1:
@@ -67,7 +69,7 @@ if test == "Tentang pH":
             st.image("https://www.sentrakalibrasiindustri.com/wp-content/uploads/2023/05/perbedaan-kertas-lakmus-biru-dan-merah.jpg")
             st.caption('Kertas Lakmus Merah dan Biru')
         st.write('Kertas lakmus adalah alat yang digunakan untuk menguji apakah suatu zat bersifat asam atau basa. Ketika suatu zat dilarutkan dalam air, larutan yang dihasilkan menyebabkan kertas lakmus berubah warna. Jika dalam keadaan asam berarti memerahkan kertas lakmus biru, sedangkan dalam keadaan basa membirukan lakmus merah.')
-
+        st.write("---")
         st.header(':red[pH Meter]')
         g1, g2, g3 = st.columns([1,2,1])
         with g1:
@@ -91,6 +93,7 @@ if test == "Tentang pH":
         st.write('Nilai pH dapat dijumpai dalam kehidupan sehari-hari, terutama dalam bahan pangan dan kebutuhan utama lainnya. Asam merupakan salah satu penyusun dari berbagai bahan makanan dan minuman. Beberapa contoh diantaranya cuka, keju, kopi, buah-buahan, minuman bersoda, berkarbonasi dan berenergi. Hal itu dikarenakan keasaman soda terdapat pada pH 3 atau lebih rendah yang berasal dari konversi CO2 terlarut menjadi H2O sehingga menghasilkan HCO3 dan H+.')
         st.write('Zat netral dalam pH adalah mereka yang memiliki potensi hidrogen (pH) sama dengan 7. Contoh pH netral dapat dijumpai pada air keran, air sungai, air mata air langsung. Basa adalah suatu senyawa yang jika dilarutkan dalam air (larutan) dapat melepaskan ion hidroksida (OH-). Oleh karena itu, semua rumus kimia basa umumnya mengandung gugus OH.Dalam keadaan murni, basa umumnya berupa kristal padat dan bersifat kaustik. Beberapa produk rumah tangga seperti deodoran, obat maag (antacid) dan sabun serta deterjen mengandung basa.')
         st.write('Keseimbangan asam basa jaringan tubuh dan darah manusia harus berada pada pH 7,3-7,5 artinya kondisi tubuh bersifat agak basa atau alkalin, agar tetap sehat dan berfungsi optimal. Di atas pH 7,8 atau di bawah pH 6,8 akan menimbulkan gangguan metabolisme, yang pada akhirnya juga gangguan pada kesehatan. Untuk menjaga kondisi tubuh tersebut, sebaiknya komposisi menu terdiri dari 70% makanan pembentuk basa (alkaline forming food) dan 30% makanan pembentuk asam (acid forming food).')  
+        st.write("---")
 
 #Halaman Perhitungan pH
 if test == "Penentuan pH":
